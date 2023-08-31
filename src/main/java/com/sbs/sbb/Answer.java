@@ -21,7 +21,7 @@ public class Answer {
 
     // Many = Answer, One = Question
     // 필수
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Question question;
     // question_id 라는 칼럼이 생김
 }
