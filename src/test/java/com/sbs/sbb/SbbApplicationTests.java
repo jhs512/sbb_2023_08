@@ -4,7 +4,6 @@ import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 
 import java.util.Optional;
 
@@ -19,7 +18,7 @@ class SbbApplicationTests {
 
     @Test
     @Transactional
-    @Rollback(true)
+    // @Rollback(true) // 테스트 모드에서는 @Transactional 만 있다면 이 구문을 생략해도 된다
     void testJpa() {
 //        Question q1 = new Question();
 //        q1.setSubject("sbb가 무엇인가요?");
